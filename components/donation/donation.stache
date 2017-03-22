@@ -2,7 +2,11 @@
 	<div class="donationbar center-block">
 		<div class="progresstooltip">
 			<div class="tooltipdescription">
-				${{remainingamount}} still needed for this project.
+				{{#if remainingamount}}
+					${{remainingamount}} still needed for this project.
+				{{else}}
+					Thank you! Mission accomplished!
+				{{/if}}
 			</div>
 			<div class="triangle-down">
 				

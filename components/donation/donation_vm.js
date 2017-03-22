@@ -8,11 +8,14 @@ var donationViewModel = can.Map.extend({
 	},
 
 	givenow : function() {
-		var donatedamount = this.attr('donatedamount');
-			donationamount = this.attr('donationamount');
+		var donatedamount = this.attr('donatedamount'),
+			donationamount = this.attr('donationamount'),
+			amountobeadded;
 
 		if (this.validateInput(donationamount) && donatedamount < 1000) {
-			this.attr('donatedamount', donatedamount + Math.floor(donationamount));
+			amountobeadded = donatedamount + Math.floor(donationamount);
+			amountobeadded = amountobeadded > 1000 ? 1000 : amountobeadded;
+			this.attr('donatedamount', amountobeadded);
 			this.attr('remainingamount', 1000 - this.attr('donatedamount'));
 			console.log("donation: " + this.attr('donatedamount'));
 			this.setProgressBar();
@@ -25,7 +28,16 @@ var donationViewModel = can.Map.extend({
 			display: 'popup',
 			href: 'https://jigneshvasoya3292.github.io/donationpage/',
 			quote: 'Yay, I donated!'
-			}, function(response){});
+			}, 
+			function(response){
+				if (response && !response.error_message) {
+			      console.log('Posted Successfully');
+			    } else {
+			      console.log('Failed while posting' + JSON.stringify(response));
+			    }
+			});
+
+		window.open('https://twitter.com/share?text=' + encodeURIComponent('Yay, I donated!'));
 	},
 
 	setProgressBar : function () {
