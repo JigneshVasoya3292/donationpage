@@ -23,7 +23,7 @@ var donationViewModel = can.Map.extend({
 		FB.ui({
 			method: 'share',
 			display: 'popup',
-			href: 'https://sarthak-04.github.io/donationCart/',
+			href: 'https://jigneshvasoya3292.github.io/donationpage/',
 			quote: 'Yay, I donated!'
 			}, function(response){});
 		},
