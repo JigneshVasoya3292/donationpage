@@ -1,0 +1,56 @@
+<div id="donationcontainer" class="container">
+	<div class="donationbar center-block">
+		<div class="progresstooltip">
+			<div class="tooltipdescription">
+				${{remainingamount}} still needed for this project.
+			</div>
+			<div class="triangle-down">
+				
+			</div>
+		</div>
+		<div class="progressbarempty">
+			<div class="progressbarfull"></div>
+		</div>
+	</div>
+	<div class="donationdescription center-block">
+		<div class="firstline">
+			<span class="threedays fontbold descriptionfont">Only 3 days left</span>
+			<span class="descriptionfont"> to fund this project.</span>
+		</div>
+		<div class="secondline">
+			<span class="descriptionfont">Join the </span>
+			<span class="descriptionfont fontbold">42 </span>
+			<span class="descriptionfont">other donors who have already supported this project. Every dollar helps.</span>
+		</div>
+		<div class="thirdline">
+			<div class="donationboxdiv">
+				<span class="donationbox">
+				<span class="dollar">$</span>
+				<input type="text" class="donationamount" name="donationamount" can-value="{donationamount}">
+			</span>
+			</div>
+			<div class="givenowbuttondiv">
+				<button id="givenowbutton" class="btn" can-click="{givenow}">Give Now</button>
+			</div>
+		</div>
+		<div class="fourthline">
+			Why give $50?
+		</div>
+	</div>
+
+	<div id="bottombuttons" class="center-block">
+		<button id="bottombutton1" class="btn" data-toggle="modal" data-target="#saved-modal" data-backdrop="false">Save for later</button>
+		<button id="bottombutton2" class="btn" can-clicl="{sharebuttonclicked}">Tell your friends</button>
+	</div>
+</div>
+
+<div class="modal" id="saved-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  	<div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	        Saved!
+	        <br> Press Esc to close. </br>
+	      </div>
+	    </div>
+	</div>
+</div>
