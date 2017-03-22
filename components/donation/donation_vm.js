@@ -37,7 +37,7 @@ var donationViewModel = can.Map.extend({
 			    }
 			});
 
-		window.open('https://twitter.com/share?text=' + encodeURIComponent('Yay, I donated!'));
+		window.open('https://twitter.com/share?text=' + encodeURIComponent('Yay, I donated!'), '_blank');
 	},
 
 	setProgressBar : function () {
