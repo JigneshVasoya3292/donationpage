@@ -26,7 +26,7 @@ var donationViewModel = can.Map.extend({
 			href: 'https://jigneshvasoya3292.github.io/donationpage/',
 			quote: 'Yay, I donated!'
 			}, function(response){});
-		},
+	},
 
 	setProgressBar : function () {
 		var donatedamount = this.attr('donatedamount');

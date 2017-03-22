@@ -40,7 +40,7 @@
 
 	<div id="bottombuttons" class="center-block">
 		<button id="bottombutton1" class="btn" data-toggle="modal" data-target="#saved-modal" data-backdrop="false">Save for later</button>
-		<button id="bottombutton2" class="btn" can-clicl="{sharebuttonclicked}">Tell your friends</button>
+		<button id="bottombutton2" class="btn" can-click="{sharebuttonclicked}">Tell your friends</button>
 	</div>
 </div>
 
